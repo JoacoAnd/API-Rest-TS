@@ -4,9 +4,11 @@ import path from 'path';
 
 // Import Routes
 import IndexRoutes from './routes';
+import BooksRoutes from './routes/books';
 
 // Inicializacion
 const app = express();
+import './database';
 
 // Configuracion
 app.set('port', process.env.PORT || 3000);
@@ -28,7 +30,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Rutas
-app.use('/books', IndexRoutes);
+app.use('/', IndexRoutes)
+app.use('/books', BooksRoutes);
 
 // Correr servidor
 app.listen(app.get('port'), () => {

@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/express-handlebars": "^6.0.0",
+    "@types/mongoose": "^5.11.97",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
     "mongoose": "^6.7.3"
